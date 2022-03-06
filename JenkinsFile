@@ -1,0 +1,23 @@
+pipeline {
+  agent {
+        label "josue-alfaro-worker"
+    stage('SCM checkout') {
+      checkout scm
+    }
+    stage('prepare') {
+      echo "version check"
+    }
+    stage('build') {
+      echo "compiling data"
+    }
+    stage('unit test') {
+      sh "./index.html.sh"
+    }
+    stage('build') {
+      sh "tar -cvzf index.html.tar.gz index.html.sh"
+    }
+    stage('deploy') {
+      echo "uploading package...localhost"
+    }
+  }
+}
