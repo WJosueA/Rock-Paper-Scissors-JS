@@ -1,8 +1,6 @@
 
 pipeline {
-    agent {
-        label "josue-alfaro-worker"
-    }
+    agent any
     stages {
         stage('SCM Checkout') {
             steps {
