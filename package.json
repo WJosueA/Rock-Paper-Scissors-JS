@@ -9,7 +9,7 @@
       "test": "mocha -R spec src/**/*script.js"
     },
     "keywords": [
-      "node.js",
+      "node.js"
     ],
     "author": "Gustavo Apolinario <gustavo.guss@gmail.com>",
     "license": "ISC",
