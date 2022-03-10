@@ -1,29 +1,26 @@
 pipeline {
-    agent any
-    tools { nodejs 'WJAR_JS_Proj' }
-
-    stages {
-        stage('Cloning Git') {
+  agent any
+    
+  tools {nodejs "WJAR_JS_Proj"}
+    
+  stages {
+        
+    stage('Cloning Git') {
       steps {
         git 'https://github.com/WJosueA/Rock-Paper-Scissors-JS'
       }
-        }
-        stage('Instalar Dependencias') {
-            steps {
+    }
+        
+    stage('Install dependencies') {
+      steps {
         sh 'npm install'
-            }
-        }
-        stage('JS Test') {
-            stage('Test') {
+      }
+    }
+     
+    stage('Test') {
       steps {
          sh 'npm test'
       }
-            }
-        stage('Publish') {
-            steps {
-                echo 'Deploying to https://wjosuea.github.io/Rock-Paper-Scissors-JS/'
-            }
-        }
-        }
-    }
+    }      
+  }
 }
