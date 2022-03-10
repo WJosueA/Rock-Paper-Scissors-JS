@@ -1,31 +1,30 @@
 
 pipeline {
     agent any
+    
+    tools {nodejs "WJAR_JS_Proj"}
+
     stages {
-        stage('SCM Checkout') {
-            steps {
-                echo "Source Code Gathering..."
-            }
-        }
+        stage('Cloning Git') {
+      steps {
+        git 'https://github.com/WJosueA/Rock-Paper-Scissors-JS'
+      }
+    }
         
-        stage('Prepare') {
+        stage('Instalar Dependencias') {
             steps {
-                echo "installing..."
-            }
-        }
-        stage('Package') {
-            steps {
-                echo "Building..."
-            }
-        }
-        stage('Unit Test') {
-            steps {
-                echo "Testing..."
-            }
-        }
+        sh 'npm install'
+      }
+    }
+        stage('JS Test') {
+            stage('Test') {
+      steps {
+         sh 'npm test'
+      }
+    }      
         stage('Publish') {
             steps {
-                echo "Deploying..."
+                echo "Deploying to https://wjosuea.github.io/Rock-Paper-Scissors-JS/"
             }
         }
     }
