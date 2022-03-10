@@ -1,0 +1,22 @@
+{
+  "name": "rock-paper-scissors-js",
+  "version": "1.0.0",
+  "description": "rock-paper-scissors-js-app",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WJosueA/Rock-Paper-Scissors-JS.git"
+  },
+  "keywords": [
+    "RPS"
+  ],
+  "author": "Javi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WJosueA/Rock-Paper-Scissors-JS/issues"
+  },
+  "homepage": "https://github.com/WJosueA/Rock-Paper-Scissors-JS#readme"
+}
