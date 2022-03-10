@@ -1,7 +1,7 @@
 pipeline {
   agent any
     
-  tools {nodejs "WJAR_JS_Proj"}
+  tools {nodejs "node"}
     
   stages {
         
@@ -13,9 +13,7 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        withNPM(npmrcConfig:'my-custom-npmrc') {
-            echo "Performing npm build..."
-            sh 'npm install'
+        sh 'npm install'
       }
     }
      
