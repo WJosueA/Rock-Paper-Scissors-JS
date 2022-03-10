@@ -10,7 +10,6 @@ pipeline {
         git 'https://github.com/WJosueA/Rock-Paper-Scissors-JS'
       }
     }
-        
         stage('Instalar Dependencias') {
             steps {
         sh 'npm install'
