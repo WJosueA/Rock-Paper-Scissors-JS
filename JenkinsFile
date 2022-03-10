@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tools {nodejs "WJAR_JS_Proj"}
+    tools { nodejs 'WJAR_JS_Proj' }
 
     stages {
         stage('Cloning Git') {
@@ -21,7 +21,7 @@ pipeline {
             }
         stage('Publish') {
             steps {
-                echo "Deploying to https://wjosuea.github.io/Rock-Paper-Scissors-JS/"
+                echo 'Deploying to https://wjosuea.github.io/Rock-Paper-Scissors-JS/'
             }
         }
         }
