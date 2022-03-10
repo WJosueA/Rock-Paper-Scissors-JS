@@ -13,13 +13,19 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        bat 'npm install'
+        sh 'npm config ls'
       }
     }
      
     stage('Test') {
       steps {
-         bat 'npm test'
+         sh 'npm test'
+      }
+    }      
+         
+    stage('Deploy') {
+      steps {
+         echo 'Deploying to https://wjosuea.github.io/Rock-Paper-Scissors-JS/'
       }
     }      
   }
